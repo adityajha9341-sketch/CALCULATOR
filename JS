@@ -1,0 +1,27 @@
+function add() {
+  let a = parseFloat(document.getElementById("num1").value);
+  let b = parseFloat(document.getElementById("num2").value);
+  document.getElementById("result").innerText = a + b;
+}
+
+function sub() {
+  let a = parseFloat(document.getElementById("num1").value);
+  let b = parseFloat(document.getElementById("num2").value);
+  document.getElementById("result").innerText = a - b;
+}
+
+function mul() {
+  let a = parseFloat(document.getElementById("num1").value);
+  let b = parseFloat(document.getElementById("num2").value);
+  document.getElementById("result").innerText = a * b;
+}
+
+function div() {
+  let a = parseFloat(document.getElementById("num1").value);
+  let b = parseFloat(document.getElementById("num2").value);
+  if (b === 0) {
+    document.getElementById("result").innerText = "Error";
+  } else {
+    document.getElementById("result").innerText = a / b;
+  }
+}
