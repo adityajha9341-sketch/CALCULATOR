@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Calculator</title>
+</head>
+<body>
+  <h2>Simple Calculator</h2>
+  <input id="num1" type="number" placeholder="Enter number"> 
+  <input id="num2" type="number" placeholder="Enter number"><br><br>
+
+  <button onclick="add()">+</button>
+  <button onclick="sub()">-</button>
+  <button onclick="mul()">*</button>
+  <button onclick="div()">/</button>
+
+  <h3>Result: <span id="result"></span></h3>
+
+  <script>
+    function add(){
+      let a = parseFloat(document.getElementById("num1").value);
+      let b = parseFloat(document.getElementById("num2").value);
+      document.getElementById("result").innerText = a + b;
+    }
+    function sub(){
+      let a = parseFloat(document.getElementById("num1").value);
+      let b = parseFloat(document.getElementById("num2").value);    
+      document.getElementById("result").innerText = a - b;
+    }
+    function mul(){
+      let a = parseFloat(document.getElementById("num1").value);
+      let b = parseFloat(document.getElementById("num2").value);
+      document.getElementById("result").innerText = a * b;
+    }
+    function div(){
+      let a = parseFloat(document.getElementById("num1").value);
+      let b = parseFloat(document.getElementById("num2").value);
+      if(b === 0){
+        document.getElementById("result").innerText = "Error";
+      } else {
+        document.getElementById("result").innerText = a / b;
+      }
+    }
+  </script>
+</body>
+</html>
